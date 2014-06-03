@@ -149,13 +149,13 @@ module.exports = function(grunt){
     grunt.loadNpmTasks('grunt-newer');
   grunt.registerTask('default', [
     'connect', 
-    'newer:copy', 
-    'newer:jade', 
-    'newer:stylus',
-    'newer:concat',
-    'newer:min',
-    'newer:cssmin',
-    'newer:imagemin:dynamic',
+    'copy', 
+    'jade', 
+    'stylus',
+    'concat',
+    'min',
+    'cssmin',
+    'imagemin:dynamic',
     'watch', 
   ]);
 };

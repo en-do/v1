@@ -14,7 +14,7 @@ Let us first establish the necessary tools to work
 2. After installation you will be available **node package manager**
 3. `npm install -g grunt`
 
-These 4 steps, you perform a one-time, and more is not needed. In them we install programs, knowledge of which is **not required** to work
+These 3 steps, you perform a one-time, and more is not needed. In them we install programs, knowledge of which is **not required** to work
 
 ###Begin
 To start working with a new project, you will need to perform three new statements:

@@ -12,22 +12,22 @@ Let us first establish the necessary tools to work
 
 1. Download and install the latest version [nodeJS](http://nodejs.org/download/)
 2. After installation you will be available **node package manager**
-3. `npm install -g grunt`
+3. `npm install -g grunt-cli`
 
 These 3 steps, you perform a one-time, and more is not needed. In them we install programs, knowledge of which is **not required** to work
 
 ###Begin
 To start working with a new project, you will need to perform three new statements:
 
-1. `git clone git@github.com:jslby/fewatcher.git my_project`, где `my_project` это директория, где будет Ваше приложение
+1. Create some dir and run console
 2. `npm install`
 3. `grunt`
 
 In the first statement, we clone the repository itself on your computer, then run the install all dependencies.
-The last statement run the server with your layout on `http://0.0.0.0:3000`
+The last statement run the server with your layout on `http://127.0.0.1:3000`
 
 After that you can work in a directory `souce`.
-The site will be available at `0.0.0.0:3000`.
+The site will be available at `127.0.0.1:3000`.
 
 Finished layout is stored in a directory `dest`.
 

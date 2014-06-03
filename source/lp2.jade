@@ -1,0 +1,91 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		title Iexpress Lp2
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Raleway:400,300,600')
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Lato')
+		link(rel='stylesheet', type='text/css', href='css/_main.min.css')
+		script(src='js/vendor/jquery-1.11.1.min.js')
+		script(src='js/_main.js')
+
+	body.lp2_styles
+		.wrapper
+			.section.header_bg
+				.container
+					.col_12
+						a(href="http://insuranceexpress.com/")
+							img.logo(src='img/logo2.png',alt='InsuranceExpress.com')
+					.col_12.text-center
+						h1.main_title
+							| Free Online Auto Insurance Quotes
+						h2.sub_title
+							| Compare 
+							span.p_state USA 
+							| &nbsp;Auto Insurance Rates And Get The Best Deal
+					.col_12.text-center.marginb20
+						.arrow_l
+						input.input.large(type="text", maxlength="5",placeholder="Enter Your ZIP code")
+						.arrow_r
+					.col_12.text-center
+						button.subm_js.btn.large.marginb20(type="button") 
+							span.changer.normal get a quote
+							span.changer.hover start my quote
+						.error_lp.normal
+							|^ Please fill in your ZIP code ^
+					hr.hr.absolute
+					img.man_dan(src="img/dan_main2.png",alt='')
+			.section
+				.container
+
+					.col_6
+						p.lined Founded in 1994 out of Boston, Massachusetts, Insurance Express.com is widely recognized as a regional leader providing Insurance products. Financial Services and Professional Consulting in Florida, Massachusetts and New Hampshire. 
+						p.lined.margint20 Our efficient representatives can take a complete quote sheet and shop the market for the best price and coverage available. 
+						p.lined.margint20 Our staffed CALL CENTER is in operation to handle all needs, both big and small with the fastest turnaround time in the insurance industry. You won’t believe how fast we respond to all of your requests!
+					.col_6
+						p.lined Our pledge is to help you every step of the way to not only to ensure that your purchase of insurance coverage is executed smoothly but that you have the right insurance coverage the first time around. 
+						p.lined.margint20 We have specifically designed our agency to handle the most complex to the simplest property risk, concentrating on accessing the lowest possible rates at all times for our clients. 
+						p.lined.margint20 Our agency was designed with the mindset of being able to quote on any and all insurance offered by “A Rated” insurance carriers and in doing so being able of offer the best coverage with the most competitive rates.
+					.col_12
+						img.man_mid(src="img/dan2.png",alt='')
+					hr.margint203bm2.hr		
+					.col_12.text-center.margint40
+						h3.title Testimonials:
+					.col_4.mh300
+						img.rev_photo(src="img/term1.jpg",alt='')
+						p.lined
+							|“Insurance Express is amazing! They’re an insurance agency and they have opened up their website to allow us, the public, full access to their competition and all the insurance companies across the country to get a quote. How cool is that? Now I’ll really know if I’m getting the best price on my insurance.”
+						p.name.text-right.lined
+							|Ashley T. Florida
+					.col_4.mh300
+						img.rev_photo(src="img/term2.jpg",alt='')
+						p.lined
+							|“I was struggling to make ends meet and I was looking to cut my expenses everywhere I could. A friend told me about Insurance Express so I visited the site. I started my quote and it was fast. Within minutes I had many quotes and saved over $600 on my insurance. This was a big help during a difficult time.”
+						p.name.text-right.lined
+							|Steven M. California
+					.col_4.mh300
+						img.rev_photo(src="img/term3.jpg",alt='')
+						p.lined
+							|“My husband and I were looking to reduce our insurance costs. A neighbor recommended we try Insurance Express as an easy way to shop. It really just took a few minutes and I had all the quotes I needed to compare. It was that simple. Great savings.”
+						p.name.text-right.lined
+							|Stephanie G. Ohio	
+			.section
+				.container
+					.col_6.text-right.margint68
+						input.input.mid.default(type="text", maxlength="5",placeholder="Enter Your ZIP code")
+					.col_6.text-left.margint65
+						button.subm_js.btn.mid.margint68(type="button") 
+							span start my quote
+						.error_lp.normal.get_mid
+							|^ Please fill in your ZIP code ^
+					hr.margint60b17.hr
+					.col_12.text-center.marginb20
+						img(src="img/badges.png",alt="")
+			.push
+		.footer
+			.section
+				.container
+					include partials/footer

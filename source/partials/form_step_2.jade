@@ -1,0 +1,130 @@
+h1.form_title Step 2 of 3: Vehicle Details
+.car_steps.step2
+	.car_cnt
+		.car_color
+		.car_black
+	.step
+		span.st_title Step
+		span.round 3
+	.step.step_active
+		span.st_title Step
+		span.round 2
+	.step.step_active
+		span.st_title Step
+		span.round 1
+
+.input_container
+	.label 
+		span Currently Insured?
+	.radio_cnt
+		label.radio Yes
+			input(type="radio", id="currently_insured_yeah", name="insured", checked)
+			i.i_rad
+		label.radio No
+			input(type="radio", id="currently_insured_nope", name="insured")
+			i.i_rad
+	i.i_icon
+.input_container
+	.label 
+		span Coverage*
+	select(id="coverage_id", name="coverage", data-placeholder="Standart").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span First Name*
+	input(type="text", id="fname_id", name="fname").field.field_input
+	i.i_icon
+.input_container
+	.label 
+		span Last Name*
+	input(type="text", id="lname_id", name="lname").field.field_input
+	i.i_icon
+.input_container
+	.label 
+		span Date Of Birth*
+	input(type="text", id="date_id", name="date", placeholder="MM/DD/YYYY").field.field_input
+	i.i_cal
+	i.i_icon
+.input_container
+	.label 
+		span Gender
+	.radio_cnt
+		label.radio Male
+			input(type="radio", id="male", name="sex", checked)
+			i.i_rad
+		label.radio Female
+			input(type="radio", id="female", name="sex")
+			i.i_rad
+	i.i_icon
+.input_container
+	.label 
+		span Marital Status*
+	select(id="marital_status_id", name="marital_status", data-placeholder="Single").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span Occupation*
+	select(id="occupation_id", name="occupation", data-placeholder="Please choose").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span Education*
+	select(id="education_id", name="education", data-placeholder="Less than High School").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span Residence*
+	select(id="residence_id", name="residence", data-placeholder="Rent").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span Years At Residence*
+	select(id="years_at_residence_id", name="years_at_residence", data-placeholder="-").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span Months At Residence*
+	select(id="months_at_residence_id", name="months_at_residence", data-placeholder="-").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span Credit Evalutation*
+	select(id="credit_evalutation_id", name="credit_evalutation", data-placeholder="Good").field.field_select
+		option(value="")
+		option(value="Text 1") Text 1 
+		option(value="Text 2") Text 2
+		option(value="Text 3") Text 3
+	i.i_icon
+.input_container
+	.label 
+		span Age First Licensed*
+	input(type="text", id="first_licensed_id", name="first_licensed", placeholder="16").field.field_input
+	i.i_icon

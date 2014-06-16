@@ -9,15 +9,7 @@ html
 		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Raleway:400,300,600')
 		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Lato')
 		link(rel='stylesheet', type='text/css', href='css/_main.min.css')
-		link(rel='stylesheet', type='text/css', href='css/select2.css')
-		script(src='js/vendor/jquery-1.11.1.min.js')
-		script(src='js/vendor/jquery-ui-1.10.4.custom.min.js')
-		script(src='js/vendor/jquery.validate.min.js')
-		script(src='js/vendor/jquery.maskedinput.min.js')
-		script(src='js/vendor/select2.js')
-		script(src='js/vendor/ouibounce.js')
-		script(src='js/_main.js')
-		
+		include partials/dev
 	body.lp2_styles.dan_flow
 		.wrapper
 			.section
@@ -36,21 +28,9 @@ html
 					form(id="mainform", name="mainform", action="", method="post").form
 						.block_step
 							.col_12
-								include partials/form_step_1
-							.col_12.text-center
-								button.next.btn.large.margint20(type="button") 
-									span continue
-						.block_step.hidden
-							.col_12
 								include partials/form_step_2
 							.col_12.text-center
-								button.next.btn.large.margint20(type="button") 
-									span continue
-						.block_step.hidden
-							.col_12
-								include partials/form_step_3
-							.col_12.text-center
-								button.btn.large.margint20(type="submit") 
+								button.next.btn.large.margint20(type="submit") 
 									span continue
 						.steps_errors.text-center
 							span

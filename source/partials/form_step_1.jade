@@ -16,36 +16,35 @@ h1.form_title Step 1 of 3: Vehicle Details
 .input_container
 	.label 
 		span Year*
-	select(id="year_id", name="", data-placeholder="Year").field.field_select
-		option(value="")
-		option(value="")
-		option(value="Text 1") Text 1 
+	select(id="year_id", name="", data-placeholder="", required).field.field_select
+		option(value, disabled, selected)  Year
+		option(value="Text 1") Text 1
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
 	i.i_icon
 .input_container
 	.label 
 		span Make*
-	select(id="make_id", name="", data-placeholder="Make").field.field_select
-		option(value="")
+	select(id="make_id", name="", data-placeholder="", required).field.field_select
+		option(value, disabled, selected) Make
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
 	i.i_icon
-.input_container.attention
+.input_container
 	.label 
 		span Model*
-	select(id="model_id", name="", data-placeholder="Model").field.field_select
-		option(value="")
+	select(id="model_id", name="", data-placeholder="", required).field.field_select
+		option(value, disabled, selected) Model
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
 	i.i_icon
-.input_container.check
+.input_container
 	.label 
 		span Style*
-	select(id="style_id", name="", data-placeholder="Style").field.field_select
-		option(value="")
+	select(id="style_id", name="", data-placeholder="", required).field.field_select
+		option(value, disabled, selected) Style
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
@@ -53,8 +52,8 @@ h1.form_title Step 1 of 3: Vehicle Details
 .input_container
 	.label 
 		span Annual Mileage*
-	select(id="annual_mileage_id", name="annual_mileage", data-placeholder="12500").field.field_select
-		option(value="")
+	select(id="annual_mileage_id", name="annual_mileage", required).field.field_select
+		option(value, disabled, selected) 12500
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
@@ -62,8 +61,8 @@ h1.form_title Step 1 of 3: Vehicle Details
 .input_container
 	.label 
 		span Alarm Type*
-	select(id="alarm_type_id", name="alarm_type", data-placeholder="No Alarm").field.field_select
-		option(value="")
+	select(id="alarm_type_id", name="alarm_type", required).field.field_select
+		option(value, disabled, selected) No Alarm
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
@@ -71,8 +70,8 @@ h1.form_title Step 1 of 3: Vehicle Details
 .input_container
 	.label 
 		span Primary Use*
-	select(id="primary_use_id", name="primary_use", data-placeholder="Primary Use").field.field_select
-		option(value="")
+	select(id="primary_use_id", name="primary_use", required).field.field_select
+		option(value, disabled, selected) Primary Use
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
@@ -80,8 +79,8 @@ h1.form_title Step 1 of 3: Vehicle Details
 .input_container
 	.label 
 		span Night Parking*
-	select(id="night_parking_id", name="night_parking", data-placeholder="No Cover").field.field_select
-		option(value="")
+	select(id="night_parking_id", name="night_parking", required).field.field_select
+		option(value, disabled, selected) No Cover
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
@@ -89,8 +88,8 @@ h1.form_title Step 1 of 3: Vehicle Details
 .input_container
 	.label 
 		span Ownership*
-	select(id="ownership_id", name="ownership", data-placeholder="Financed").field.field_select
-		option(value="")
+	select(id="ownership_id", name="ownership", required).field.field_select
+		option(value, disabled, selected) Financed
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3

@@ -17,38 +17,6 @@ module.exports = function(grunt){
 				pretty: true,
 			}
 		},
-		concat: {
-			/*options: {
-				separator: ';',
-			},*/
-			dist: {
-				src: [
-					'source/js/developer/**/*.js',
-				],
-				dest: 'dest/js/_main.js',
-			}
-		},
-		removelogging: {
-			dist: {
-				src: 'dest/js/_main.js',
-				dest: 'dest/js/_main.js',
-
-				options: {
-				// see below for options. this is optional.
-				}
-			}
-		},
-		min: {
-			dist: {
-				options: {
-					'report': 'gzip'
-				},
-				files: [{
-					'src': 'dest/js/_main.js',
-					'dest': 'dest/js/_main.min.js'
-				}]
-			}
-		},
 		stylus: {
 			compile: {
 				options: {
@@ -84,14 +52,6 @@ module.exports = function(grunt){
 				expand: true,
 			}]
 		},
-		js: {
-			files: [{
-				cwd: 'source/js/vendor',
-				src: ['**/*.js'],
-				dest: 'dest/js/vendor',
-				expand: true,
-			}]
-		},
 		fonts: {
 			files: [{
 				cwd: 'source/fonts',
@@ -115,10 +75,6 @@ module.exports = function(grunt){
 				livereload: true
 			},
 			files: ['dest/**/*'],
-		},
-		js: {
-			files: ['source/js/**/*.js'],
-			tasks: ['concat', 'min'],
 		},
 		css: {
 			files: ['source/css/**/*.css'],
@@ -156,8 +112,6 @@ module.exports = function(grunt){
 		'newer:copy', 
 		'newer:jade', 
 		'newer:stylus',
-		'newer:concat',
-		'newer:min',
 		'newer:cssmin',
 		'newer:imagemin:dynamic',
 		'watch', 
@@ -166,13 +120,9 @@ module.exports = function(grunt){
 	grunt.registerTask('product', [
 		'clean',
 		'copy:css',
-		'copy:js',
 		'copy:fonts',
 		'jade', 
 		'stylus',
-		'concat',
-		'removelogging',
-		'min',
 		'cssmin',
 		'imagemin:dynamic',
 	]);

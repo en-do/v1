@@ -12,18 +12,38 @@ h1.form_title Step 2 of 3: Vehicle Details
 	.step.step_active
 		span.st_title Step
 		span.round 1
-
 .input_container
 	.label 
 		span Currently Insured?
 	.radio_cnt
 		label.radio Yes
-			input(type="radio", id="currently_insured_yeah", name="insured", required)
+			input(type="radio", id="currently_insured_yeah", name="insured")
 			i.i_rad
 		label.radio No
-			input(type="radio", id="currently_insured_nope", name="insured", required)
+			input(type="radio", id="currently_insured_nope", name="insured", checked)
 			i.i_rad
 	i.i_icon
+
+.hidded_insured
+	.input_container
+		.label 
+			span Insurance Carrier
+		select(id="insurance_carrier_id", name="insurance_carrier").field.field_select
+			option(value, disabled, selected) Select Company
+			option(value="",) name
+			option(value="") name
+		i.i_icon
+	.input_container
+		.label 
+			span Expiration Date
+		input(type="text", id="expiration_date_id", name="expiration_date", placeholder="Mm/yyyy").field.field_input
+		i.i_icon
+	.input_container
+		.label 
+			span Insured Since Date
+		input(type="text", id="insured_since_date_id", name="insured_since_date", placeholder="Mm/yyyy").field.field_input
+		i.i_icon
+
 .input_container
 	.label 
 		span Coverage*

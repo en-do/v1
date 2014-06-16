@@ -102,6 +102,18 @@ h1.form_title
 			input(type="radio", id="violations_tickets_nope", name="violations_tickets", required)
 			i.i_rad
 	i.i_icon
+.hidded_other_violations
+	.input_container
+		.label 
+			span How Many Other Violations/Tickets?
+		.radio_cnt
+			label.radio 1
+				input(type="radio", id="other_violations_tickets_yep", name="other_violations_tickets", required)
+				i.i_rad
+			label.radio 2 or More
+				input(type="radio", id="other_violations_tickets_nope", name="other_violations_tickets", required)
+				i.i_rad
+		i.i_icon
 .input_container
 	.label 
 		span Any Accidents*
@@ -113,5 +125,17 @@ h1.form_title
 			input(type="radio", id="accidents_nope", name="accidents", required)
 			i.i_rad
 	i.i_icon
+.hidded_any_accidents
+	.input_container
+		.label 
+			span Any Accidents*
+		.radio_cnt
+			label.radio 1
+				input(type="radio", id="accidents_yep", name="accidents", required)
+				i.i_rad
+			label.radio 2 or More
+				input(type="radio", id="accidents_nope", name="accidents", required)
+				i.i_rad
+		i.i_icon
 .col_12.text-center.foot-text
 	p By submitting this form I agree to receive autodialed and/or pre-recorded telephone communication from up to eight insurance companies and/or agents at the telephone number I have provided. I understand that consent is not a condition of purchase.

@@ -1,0 +1,52 @@
+doctype html
+html
+	head
+		meta(charset='utf-8')
+		meta(http-equiv='X-UA-Compatible', content='IE=edge,chrome=1')
+		title Jenny flow
+		meta(name='description', content='')
+		meta(name='viewport', content='width=device-width')
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Raleway:400,300,600')
+		link(rel='stylesheet', type='text/css', href='http://fonts.googleapis.com/css?family=Lato')
+		link(rel='stylesheet', type='text/css', href='css/_main.min.css')
+	body.lp2_styles.janny_flow
+		.wrapper
+			.section
+				.container
+					.col_12
+						a(href="http://insuranceexpress.com/")
+							img.logo(src='img/logo2.png',alt='InsuranceExpress.com')
+					.col_12.text-center
+						h1.main_title
+							span.p_state USA 
+							|  drivers, you get more for a lot less
+						h2.sub_title
+							| Personally Tailored Quotes in 3 Quick Steps 
+			.section
+				.container
+					form(id="mainform", name="mainform", action="", method="post").form
+						.block_step
+							.col_12
+								include partials/form_step_1
+							.col_12.text-center
+								button.next.btn.large.margint20(type="submit") 
+									span continue
+						.steps_errors.text-center
+							span
+						hr.margint60b17.hr					
+		.footer
+			.section
+				.container
+					include partials/footer
+
+		#overlay
+		#exit_pop.popup.pop_big
+			img.dan_exit(src="img/dan_exit.png",alt="")
+			h1.popup_title Don’t have time?
+			p.popup_subtitle Skip the form and see your quotes
+			.text-center
+				.arrow_l2
+				button.btn.large.marginb20(type="button") 
+					span get your quotes
+				.arrow_r2
+			.close

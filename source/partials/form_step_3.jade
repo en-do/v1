@@ -17,23 +17,23 @@ h1.form_title Step 3 of 3: Vehicle Details
 .input_container
 	.label 
 		span Street Address*
-	input(type="text", id="street_address_id", name="street_address").field.field_input
+	input(type="text", id="street_address_id", name="street_address", required).field.field_input
 	i.i_icon
 .input_container
 	.label 
 		span Zipcode*
-	input(type="text", id="zipcode_id", name="zipcode").field.field_input
+	input(type="number", id="zipcode_id", name="zipcode", min="10000", max="80000", maxlength="5", required).field.field_input
 	i.i_icon
 .input_container
 	.label 
 		span City*
-	input(type="text", id="city_id", name="city").field.field_input
+	input(type="text", id="city_id", name="city", required).field.field_input
 	i.i_icon
 .input_container
 	.label 
 		span State*
-	select(id="state", name="state_id", data-placeholder="State").field.field_select
-		option(value="")
+	select(id="state", name="state_id", required).field.field_select
+		option(value, disabled, selected) State
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
@@ -41,18 +41,18 @@ h1.form_title Step 3 of 3: Vehicle Details
 .input_container
 	.label 
 		span Phone*
-	input(type="text", id="phone_id", name="phone", placeholder="xxx-xxx-xxxx").field.field_input
+	input(type="tel", id="phone_id", name="phone", placeholder="xxx-xxx-xxxx", required).field.field_input
 	i.i_icon
 .input_container
 	.label 
 		span Email*
-	input(type="text", id="email_id", name="email").field.field_input
+	input(type="email", id="email_id", name="email", required).field.field_input
 	i.i_icon
 .input_container
 	.label 
 		span Best time to contact
-	select(id="time_to_contact_id", name="time_to_contact", data-placeholder="Anytime").field.field_select
-		option(value="")
+	select(id="time_to_contact_id", name="time_to_contact").field.field_select
+		option(value, disabled, selected) Anytime
 		option(value="Text 1") Text 1 
 		option(value="Text 2") Text 2
 		option(value="Text 3") Text 3
@@ -62,7 +62,7 @@ h1.form_title Step 3 of 3: Vehicle Details
 		span Yes! Send me a quote.*
 	.radio_cnt
 		label.radio Yes
-			input(type="checkbox", id="quote_id", name="quote")
+			input(type="checkbox", id="quote_id", name="quote", required)
 			i.i_che
 	i.i_icon
 
@@ -74,10 +74,10 @@ h1.form_title
 		span Suspended License*
 	.radio_cnt
 		label.radio Yes
-			input(type="radio", id="licence_susp_yep", name="license", checked)
+			input(type="radio", id="licence_susp_yep", name="license", required)
 			i.i_rad
 		label.radio No
-			input(type="radio", id="licence_susp_nope", name="license")
+			input(type="radio", id="licence_susp_nope", name="license", required)
 			i.i_rad
 	i.i_icon
 .input_container
@@ -85,10 +85,10 @@ h1.form_title
 		span DWI/DUI*
 	.radio_cnt
 		label.radio Yes
-			input(type="radio", id="dwi_dui_yep", name="dwi_dui", checked)
+			input(type="radio", id="dwi_dui_yep", name="dwi_dui", required)
 			i.i_rad
 		label.radio No
-			input(type="radio", id="dwi_dui_nope", name="dwi_dui")
+			input(type="radio", id="dwi_dui_nope", name="dwi_dui", required)
 			i.i_rad
 	i.i_icon
 .input_container
@@ -96,22 +96,46 @@ h1.form_title
 		span Other Violations/Tickets*
 	.radio_cnt
 		label.radio Yes
-			input(type="radio", id="violations_tickets_yep", name="violations_tickets", checked)
+			input(type="radio", id="violations_tickets_yep", name="violations_tickets", required)
 			i.i_rad
 		label.radio No
-			input(type="radio", id="violations_tickets_nope", name="violations_tickets")
+			input(type="radio", id="violations_tickets_nope", name="violations_tickets", required)
 			i.i_rad
 	i.i_icon
+.hidded_other_violations
+	.input_container
+		.label 
+			span How Many Other Violations/Tickets?
+		.radio_cnt
+			label.radio 1
+				input(type="radio", id="other_violations_tickets_yep", name="other_violations_tickets", required)
+				i.i_rad
+			label.radio 2 or More
+				input(type="radio", id="other_violations_tickets_nope", name="other_violations_tickets", required)
+				i.i_rad
+		i.i_icon
 .input_container
 	.label 
 		span Any Accidents*
 	.radio_cnt
 		label.radio Yes
-			input(type="radio", id="accidents_yep", name="accidents", checked)
+			input(type="radio", id="accidents_yep", name="accidents", required)
 			i.i_rad
 		label.radio No
-			input(type="radio", id="accidents_nope", name="accidents")
+			input(type="radio", id="accidents_nope", name="accidents", required)
 			i.i_rad
 	i.i_icon
+.hidded_any_accidents
+	.input_container
+		.label 
+			span Any Accidents*
+		.radio_cnt
+			label.radio 1
+				input(type="radio", id="accidents_yep", name="accidents", required)
+				i.i_rad
+			label.radio 2 or More
+				input(type="radio", id="accidents_nope", name="accidents", required)
+				i.i_rad
+		i.i_icon
 .col_12.text-center.foot-text
 	p By submitting this form I agree to receive autodialed and/or pre-recorded telephone communication from up to eight insurance companies and/or agents at the telephone number I have provided. I understand that consent is not a condition of purchase.

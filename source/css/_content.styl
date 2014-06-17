@@ -179,6 +179,28 @@ html, body
 	font-size 15px
 	color #fff
 	font-family 'Lato', sans-serif
+@keyframes a_arrow_l {
+	from {
+		left 270px
+	}
+	50% {
+		left 245px
+	}
+	to {
+		left 270px
+	}
+}
+@keyframes a_arrow_r {
+	from {
+		right 270px
+	}
+	50% {
+		right 245px
+	}
+	to {
+		right 270px
+	}
+}
 .arrow_l
 	background arrow_l center center no-repeat
 	position absolute
@@ -187,6 +209,7 @@ html, body
 	width 24px
 	height 24px
 	display block
+	animation a_arrow_l 2s infinite
 .arrow_r
 	background arrow_r center center no-repeat
 	position absolute
@@ -195,6 +218,9 @@ html, body
 	width 24px
 	height 24px
 	display block
+	animation a_arrow_r 2s infinite
+
+
 
 .title
 	font-size 30px
@@ -407,7 +433,8 @@ html, body
 	width 100%
 	border 1px solid blue
 	border-radius 5px
-.field_input
+.field_input,
+.field_select
 	padding 8.6px 7px
 	border 1px solid blue
 
@@ -425,21 +452,14 @@ html, body
 	width 16px
 	height 16px
 	background sprite -527px -46px no-repeat
-.attention
-	.i_icon
-		display block
-		background sprite -448px -100px
-	.field_input,
-	.field_select
-		box-sizing border-box
-		margin -1px 0px
-		border 2px solid yellow
-.check
-	.i_icon
-		display block
-		background sprite -472px -100px
-
-
+.field_input:focus:required:invalid + .i_icon,
+.field_select:focus:required:invalid + .i_icon
+	display block
+	background sprite -448px -100px
+.field_input:required:valid + .i_icon,
+.field_select:required:valid + .i_icon
+	display block
+	background sprite -472px -100px
 .radio_cnt
 	padding 8.6px 7px
 	text-align center
@@ -463,8 +483,8 @@ html, body
 		background sprite -447px -45px
 	input
 		position absolute
-		top 0
-		left -9999px
+		top 6px
+		left -4px
 	input:checked + .i_rad
 		background sprite -487px -65px
 	input:checked + .i_che
@@ -477,7 +497,11 @@ html, body
 		input:checked + .radio_i
 			background sprite -60px -99px
 
-
+input[type='number']
+	-moz-appearance textfield
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button
+	-webkit-appearance none
 
 /* Exit pop */
 arrow_l3 = url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX6CAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyJpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoV2luZG93cykiIHhtcE1NOkluc3RhbmNlSUQ9InhtcC5paWQ6MTU4Rjc1MTNFODA4MTFFM0FFQjVBRjZCNjRBQzNGRTciIHhtcE1NOkRvY3VtZW50SUQ9InhtcC5kaWQ6MTU4Rjc1MTRFODA4MTFFM0FFQjVBRjZCNjRBQzNGRTciPiA8eG1wTU06RGVyaXZlZEZyb20gc3RSZWY6aW5zdGFuY2VJRD0ieG1wLmlpZDoxNThGNzUxMUU4MDgxMUUzQUVCNUFGNkI2NEFDM0ZFNyIgc3RSZWY6ZG9jdW1lbnRJRD0ieG1wLmRpZDoxNThGNzUxMkU4MDgxMUUzQUVCNUFGNkI2NEFDM0ZFNyIvPiA8L3JkZjpEZXNjcmlwdGlvbj4gPC9yZGY6UkRGPiA8L3g6eG1wbWV0YT4gPD94cGFja2V0IGVuZD0iciI/Php/bJUAAAExSURBVHjajNO9SgNBFIbh3UHFzkTb1UTNDagbrCzUSNBaRBBrL8oUgiB4AQoSIZBERQ1YiZr0/oAI/hWawnwDZ5rhOxMHXgJz9mGX3Un8dxsPR1FUQRuojjbRa9RnGbSLttAgWkZVNNYPxrjjD36HvP0bVEJvoTtekf0ZdIpGQ3Ad3SnYPnZWgy9oCd2T+azgDIN2PaNFBc8JHmHQYXvnB4JTHxvvgifBbYKL6MRhQy54FNwhs3mH7XfU3niCaqhAZkchaNeCHEN//ZoAyqN9ZXaswZw8Zo7M7BNsD5DBhKA8mTXQGvo2CpokqOmQ/znGBU0RdCboyz8ASQCdC/r0j5xD0wRdCPpgh/xQ+ciXaBW9a3+rlOxfo7KGHDzw9lpoJYQc3EF7qGvP4H+QXT0BBgABV0Rf/mssowAAAABJRU5ErkJggg==')
@@ -584,6 +608,15 @@ arrow_r3 = url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAXCAYAAAA7kX
 	width 169px
 	height 170px
 	background yellow_man no-repeat
+
+
+
+
+/*.hidded_primary_use,
+.hidded_insured,
+.hidded_other_violations,
+.hidded_any_accidents
+	display none*/
 /*! End of _ style*/
 
 

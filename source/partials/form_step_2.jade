@@ -12,41 +12,60 @@ h1.form_title Step 2 of 3: Vehicle Details
 	.step.step_active
 		span.st_title Step
 		span.round 1
-
 .input_container
 	.label 
 		span Currently Insured?
 	.radio_cnt
 		label.radio Yes
-			input(type="radio", id="currently_insured_yeah", name="insured", checked)
+			input(type="radio", id="currently_insured_yeah", name="insured")
 			i.i_rad
 		label.radio No
-			input(type="radio", id="currently_insured_nope", name="insured")
+			input(type="radio", id="currently_insured_nope", name="insured", checked)
 			i.i_rad
 	i.i_icon
+
+.hidded_insured
+	.input_container
+		.label 
+			span Insurance Carrier
+		select(id="insurance_carrier_id", name="insurance_carrier").field.field_select
+			option(value, disabled, selected) Select Company
+			option(value="",) name
+			option(value="") name
+		i.i_icon
+	.input_container
+		.label 
+			span Expiration Date
+		input(type="text", id="expiration_date_id", name="expiration_date", placeholder="Mm/yyyy").field.field_input
+		i.i_icon
+	.input_container
+		.label 
+			span Insured Since Date
+		input(type="text", id="insured_since_date_id", name="insured_since_date", placeholder="Mm/yyyy").field.field_input
+		i.i_icon
+
 .input_container
 	.label 
 		span Coverage*
-	select(id="coverage_id", name="coverage", data-placeholder="Standart").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="coverage_id", name="coverage", required).field.field_select
+		option(value="Premium") Premium
+		option(value="Standard", selected="selected") Standard
+		option(value="State Minimum") State Minimum
 	i.i_icon
 .input_container
 	.label 
 		span First Name*
-	input(type="text", id="fname_id", name="fname").field.field_input
+	input(type="text", id="fname_id", name="fname", required).field.field_input
 	i.i_icon
 .input_container
 	.label 
 		span Last Name*
-	input(type="text", id="lname_id", name="lname").field.field_input
+	input(type="text", id="lname_id", name="lname", required).field.field_input
 	i.i_icon
 .input_container
 	.label 
 		span Date Of Birth*
-	input(type="text", id="date_id", name="date", placeholder="MM/DD/YYYY").field.field_input
+	input(type="text", id="date_id", name="date", placeholder="MM/DD/YYYY", required).field.field_input
 	i.i_cal
 	i.i_icon
 .input_container
@@ -54,77 +73,214 @@ h1.form_title Step 2 of 3: Vehicle Details
 		span Gender
 	.radio_cnt
 		label.radio Male
-			input(type="radio", id="male", name="sex", checked)
+			input(type="radio", id="male", name="sex", required)
 			i.i_rad
 		label.radio Female
-			input(type="radio", id="female", name="sex")
+			input(type="radio", id="female", name="sex", required)
 			i.i_rad
 	i.i_icon
 .input_container
 	.label 
 		span Marital Status*
-	select(id="marital_status_id", name="marital_status", data-placeholder="Single").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="marital_status_id", name="marital_status", required).field.field_select
+		option(value="Single") Single
+		option(value="Married") Married
+		option(value="Divorced") Divorced
+		option(value="Widowed") Widowed
+		option(value="Domestic Partner") Domestic Partner
+		option(value="Unkown") Unkown
 	i.i_icon
 .input_container
 	.label 
 		span Occupation*
-	select(id="occupation_id", name="occupation", data-placeholder="Please choose").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="occupation_id", name="occupation", required).field.field_select
+		option(value="Accounts Pay/Rec.") Accounts Pay/Rec.
+		option(value="Actor") Actor
+		option(value="Administration/Management") Administration/Management
+		option(value="Appraiser") Appraiser
+		option(value="Architect") Architect
+		option(value="Artist") Artist
+		option(value="Assembler") Assembler
+		option(value="Auditor") Auditor
+		option(value="Baker") Baker
+		option(value="Bank Teller") Bank Teller
+		option(value="Banker") Banker
+		option(value="Bartender") Bartender
+		option(value="Broker") Broker
+		option(value="Cashier") Cashier
+		option(value="Casino Worker") Casino Worker
+		option(value="CEO") CEO
+		option(value="Certified Public Accountant") Certified Public Accountant
+		option(value="Chemist") Chemist
+		option(value="Child Care") Child Care
+		option(value="City Worker") City Worker
+		option(value="Claims Adjuster") Claims Adjuster
+		option(value="Clergy") Clergy
+		option(value="Clerical/Technical") Clerical/Technical
+		option(value="College Professor") College Professor
+		option(value="Computer Tech.") Computer Tech.
+		option(value="Construction") Construction
+		option(value="Contractor") Contractor
+		option(value="Counselor") Counselor
+		option(value="Craftsman/Skilled Worker") Craftsman/Skilled Worker
+		option(value="CSR") CSR
+		option(value="Custodian") Custodian
+		option(value="Dancer") Dancer
+		option(value="Decorator") Decorator
+		option(value="Delivery Driver") Delivery Driver
+		option(value="Dentist") Dentist
+		option(value="Director") Director
+		option(value="Disabled") Disabled
+		option(value="Drivers") Drivers
+		option(value="Electrician") Electrician
+		option(value="Engineer-Aeronautical") Engineer-Aeronautical
+		option(value="Engineer-Aerospace") Engineer-Aerospace
+		option(value="Engineer-Chemical") Engineer-Chemical
+		option(value="Engineer-Civil") Engineer-Civil
+		option(value="Engineer-Electrical") Engineer-Electrical
+		option(value="Engineer-Gas") Engineer-Gas
+		option(value="Engineer-Geophysical") Engineer-Geophysical
+		option(value="Engineer-Mechanical") Engineer-Mechanical
+		option(value="Engineer-Nuclear") Engineer-Nuclear
+		option(value="Engineer-Other") Engineer-Other
+		option(value="Engineer-Petroleum") Engineer-Petroleum
+		option(value="Engineer-Structural") Engineer-Structural
+		option(value="Entertainer") Entertainer
+		option(value="Farmer") Farmer
+		option(value="Fire Fighter") Fire Fighter
+		option(value="Flight Attend.") Flight Attend.
+		option(value="Food Service") Food Service
+		option(value="Government") Government
+		option(value="Health Care") Health Care
+		option(value="Housewife/Househusband") Housewife/Househusband
+		option(value="Installer") Installer
+		option(value="Instructor") Instructor
+		option(value="Journalist") Journalist
+		option(value="Journeyman") Journeyman
+		option(value="Lab Tech.") Lab Tech.
+		option(value="Laborer/Unskilled Worker") Laborer/Unskilled Worker
+		option(value="Lawyer") Lawyer
+		option(value="Machine Operator") Machine Operator
+		option(value="Machinist") Machinist
+		option(value="Maintenance") Maintenance
+		option(value="Manufacturer") Manufacturer
+		option(value="Marketing") Marketing
+		option(value="Mechanic") Mechanic
+		option(value="Military E1 - E4") Military E1 - E4
+		option(value="Military E5 - E7") Military E5 - E7
+		option(value="Military Officer") Military Officer
+		option(value="Military Other") Military Other
+		option(value="Model") Model
+		option(value="Nanny") Nanny
+		option(value="Nurse/CNA") Nurse/CNA
+		option(value="Other") Other
+		option(value="Painter") Painter
+		option(value="Para-Legal") Para-Legal
+		option(value="Paramedic") Paramedic
+		option(value="Personal Trainer") Personal Trainer
+		option(value="Photographer") Photographer
+		option(value="Physician") Physician
+		option(value="Pilot") Pilot
+		option(value="Plumber") Plumber
+		option(value="Police Officer") Police Officer
+		option(value="Postal Worker") Postal Worker
+		option(value="Preacher") Preacher
+		option(value="Pro Athlete") Pro Athlete
+		option(value="Production") Production
+		option(value="Prof-College Degree") Prof-College Degree
+		option(value="Prof-Specialty Degree") Prof-Specialty Degree
+		option(value="Programmer") Programmer
+		option(value="Real Estate") Real Estate
+		option(value="Receptionist") Receptionist
+		option(value="Reservation Agent") Reservation Agent
+		option(value="Restaurant Manager") Restaurant Manager
+		option(value="Retail") Retail
+		option(value="Retired") Retired
+		option(value="Roofer") Roofer
+		option(value="Sales") Sales
+		option(value="Scientist") Scientist
+		option(value="Secretary") Secretary
+		option(value="Security") Security
+		option(value="Self Employed") Self Employed
+		option(value="Social Worker") Social Worker
+		option(value="Stocker") Stocker
+		option(value="Store Owner") Store Owner
+		option(value="Student Not Living w/Parents") Student Not Living w/Parents
+		option(value="Student Living w/Parents") Student Living w/Parents
+		option(value="Stylist") Stylist
+		option(value="Supervisor") Supervisor
+		option(value="Teacher") Teacher
+		option(value="Teacher - with Credentials") Teacher - with Credentials
+		option(value="Technical/Supervisory") Technical/Supervisory
+		option(value="Travel Agent") Travel Agent
+		option(value="Truck Driver") Truck Driver
+		option(value="Unemployed") Unemployed
+		option(value="Unknown") Unknown
+		option(value="Vet.") Vet.
+		option(value="Waitress") Waitress
+		option(value="Welder") Welder
+
 	i.i_icon
 .input_container
 	.label 
 		span Education*
-	select(id="education_id", name="education", data-placeholder="Less than High School").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="education_id", name="education", required).field.field_select
+		option(value="Less than High School") Less than High School
+		option(value="Some or No High School") Some or No High School
+		option(value="High School Diploma") High School Diploma
+		option(value="Some College") Some College
+		option(value="Associate Degree") Associate Degree
+		option(value="Bachelors Degree") Bachelors Degree
+		option(value="Masters Degree") Masters Degree
+		option(value="Doctorate Degree") Doctorate Degree
+		option(value="Other") Other
 	i.i_icon
 .input_container
 	.label 
 		span Residence*
-	select(id="residence_id", name="residence", data-placeholder="Rent").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="residence_id", name="residence", required).field.field_select
+		option(value="Own") Own
+		option(value="Rent", selected) Rent
+		option(value="Other") Other
 	i.i_icon
 .input_container
 	.label 
 		span Years At Residence*
-	select(id="years_at_residence_id", name="years_at_residence", data-placeholder="-").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="years_at_residence_id", name="years_at_residence", required).field.field_select
+		option(value, disabled, selected) -
+		option(value="0") 0
+		option(value="1") 1
+		option(value="2") 2
+		option(value="3") 3
 	i.i_icon
 .input_container
 	.label 
 		span Months At Residence*
-	select(id="months_at_residence_id", name="months_at_residence", data-placeholder="-").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="months_at_residence_id", name="months_at_residence", required).field.field_select
+		option(value, disabled, selected) -
+		option(value="0") 1
+		option(value="1") 2
+		option(value="2") 3
+		option(value="3") 4
+		option(value="4") 5
+		option(value="5") 6
+		option(value="6") 7
+		option(value="7") 8
+		option(value="8") 9
+		option(value="9") 10
+		option(value="10") 11
 	i.i_icon
 .input_container
 	.label 
 		span Credit Evalutation*
-	select(id="credit_evalutation_id", name="credit_evalutation", data-placeholder="Good").field.field_select
-		option(value="")
-		option(value="Text 1") Text 1 
-		option(value="Text 2") Text 2
-		option(value="Text 3") Text 3
+	select(id="credit_evalutation_id", name="credit_evalutation", required).field.field_select
+		option(value="Excellent") Excellent
+		option(value="Good", selected) Good
+		option(value="Fair") Fair
+		option(value="Poor") Poor
 	i.i_icon
 .input_container
 	.label 
 		span Age First Licensed*
-	input(type="text", id="first_licensed_id", name="first_licensed", placeholder="16").field.field_input
+	input(type="number", id="first_licensed_id", name="first_licensed", placeholder="16", maxlength="2" required).field.field_input
 	i.i_icon

@@ -36,12 +36,12 @@ h1.form_title Step 2 of 3: Vehicle Details
 	.input_container
 		.label 
 			span Expiration Date
-		input(type="text", id="expiration_date_id", name="expiration_date", placeholder="Mm/yyyy").field.field_input
+		input(type="month", id="expiration_date_id", name="expiration_date", placeholder="yyyy/Mm", ).field.field_input
 		i.i_icon
 	.input_container
 		.label 
 			span Insured Since Date
-		input(type="text", id="insured_since_date_id", name="insured_since_date", placeholder="Mm/yyyy").field.field_input
+		input(type="month", id="insured_since_date_id", name="insured_since_date", placeholder="yyyy/Mm").field.field_input
 		i.i_icon
 
 .input_container
@@ -65,7 +65,7 @@ h1.form_title Step 2 of 3: Vehicle Details
 .input_container
 	.label 
 		span Date Of Birth*
-	input(type="text", id="date_id", name="date", placeholder="MM/DD/YYYY", required).field.field_input
+	input(type="date", id="date_id", name="date", placeholder="MM/DD/YYYY", required).field.field_input
 	i.i_cal
 	i.i_icon
 .input_container
